@@ -25,4 +25,8 @@ class AsyncController @Inject() (actorSystem: ActorSystem)(implicit exec: Execut
       NoContent
     }
   }
+
+  def getAction = Action{
+    Ok("hello")
+  }
 }
