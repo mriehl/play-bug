@@ -21,6 +21,8 @@ import scala.concurrent.duration._
 class AsyncController @Inject() (actorSystem: ActorSystem)(implicit exec: ExecutionContext) extends Controller {
   def postAction = Action.async {
     request =>
-      Future.successful(NoContent)
+    Future {
+      NoContent
+    }
   }
 }
